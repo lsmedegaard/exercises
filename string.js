@@ -50,7 +50,7 @@ console.log(`_${firstName}_`)
 console.log(`last name is _${lastName}_`); */
 
 
-const navn = "Albus Percival Wulfric Brian Dumbledore";
+/* const navn = "Albus Percival Wulfric Brian Dumbledore";
 const firstName = navn.substring(0, 5);
 const lastName = navn.substring(29);
 const middleName = navn.substring(14, 23);
@@ -58,11 +58,29 @@ const randomCharactersInNavn = navn.substring(25, 28);
 
 
 console.log(firstName);
-
+ */
 // 1 = (0, 5)
 // 2 = (29)
 // 3 = (15, 22)
 // 4 = (14, 23)
 // 5 = (25, 28)
 // 6 = (2, 5)
+
+
+const navn = "peter"
+
+
+function resultat () {
+    const findT = navn.substring(2, 3).toUpperCase("");
+    const foersteDel = navn.substring(0, 2);
+    const andenDel = navn.substring(3, 5);
+
+    const resultatet = (`${foersteDel}${findT}${andenDel}`)
+    console.log(resultatet)
+
+}
+
+resultat(navn)
+
+
 
