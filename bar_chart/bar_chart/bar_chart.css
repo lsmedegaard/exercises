@@ -1,0 +1,54 @@
+.bar {
+    
+   
+    width: 100%;
+    background-color: deeppink; 
+    height: 100%;
+  
+}
+
+.bar_container {
+    overflow: hidden;
+    border:1px solid blueviolet;
+    bottom: 0;  
+    width: 100%;  
+   
+}
+
+.bar_container:hover {
+   border: 2px solid white;
+
+    
+}
+
+
+#bar_chart {
+    align-items: end;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(40, 2fr);
+    position: relative;
+    margin-top: 50px;
+    height: 40vw;
+    background-color:lightskyblue;
+    width: 100%;
+}
+
+
+
+@keyframes blinking {
+    from {
+      background-color:red;
+    }
+  
+    to {
+      background-color:blue;
+    }
+  }
+
+  .blinkingAnimation {
+    animation-name: blinking;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  
+  }
