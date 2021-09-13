@@ -29,8 +29,9 @@ function getNameParts(fullName) {
 
 getNameParts(); */
 
+//function til at får forskellige dele af navnet
 
-function getNameParts(fullName) {
+/* function getNameParts(fullName) {
     const firstSpace = fullName.indexOf(" ");
     const lastSpace = fullName.lastIndexOf(" ");
     
@@ -47,4 +48,19 @@ function getNameParts(fullName) {
 }
 
 
-console.log(getNameParts("Tony montanta sos"))
+getNameParts("Tony montanta sos")
+ */
+
+function fullName(lastName, firstName, middleName) {
+
+    if (middleName === undefined) {
+        console.log(`${firstName} ${lastName}`)
+
+    }else {
+        console.log(`${firstName} ${middleName} ${lastName}`)
+    }
+
+
+}
+
+fullName("Potter", "Harry", "James")
