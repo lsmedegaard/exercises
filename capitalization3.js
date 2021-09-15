@@ -24,10 +24,16 @@ function capitalize(str) {
     const firstLetter = str.substring(0,1).toUpperCase("");
     const lastSpace = str.substring(1).toLowerCase("");
 
-    console.log(`${firstLetter}${lastSpace}`);
+    let result =(`${firstLetter}${lastSpace}`);
+    
+    return result
+
 
 }
-capitalize("lASSe");
+
+const name = "lasse"
+const cap = capitalize(name)
+console.log(cap)
 
 
 
