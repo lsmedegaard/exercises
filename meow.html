@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tiger</title>
+</head>
+<body>
+        <div id="section"></div>
+    <script>
+        "use strict";
+        document.addEventListener("DOMContentLoaded", start);
+
+        async function start() {
+            let response = await fetch("tiger.svg")
+            let svgData = await response.text();
+            document.querySelector("#section").innerHTML = svgData;
+            manipulateSVG();
+        }
+
+        // function manipulateSVG () {
+        //     document.addEventListener("click", turnGreen)
+        // }
+
+        // function turnGreen () {
+        //     document.querySelector("#g302").style.fill = "red";
+        //     document.querySelector("#g306").style.fill = "red";
+        //     document.querySelector("#g350").style.fill = "red";
+        //     document.querySelector("#g474").style.fill = "red";
+        //     document.querySelector("#g470").style.fill = "red";
+        // }
+        
+
+        function manipulateSVG () {
+
+
+            document.querySelectorAll("#path304,#path308,#path352,#path476").forEach(element => {
+                element.addEventListener("click", greenEyes)
+            })
+
+            document.querySelectorAll("g g").forEach(element => {
+                element.addEventListener("mouseover", mouseOver)
+            })
+    
+        }
+
+        
+        function greenEyes () {
+            document.querySelectorAll("#path304,#path308,#path352,#path476").forEach(element => {
+                element.style.fill = "green"
+            })
+        }
+
+        function mouseOver (event) {
+            let pointer = event.target;
+            console.log(pointer.id)
+            if(pointer.id != "#path304" && pointer.id != "#path308" && pointer.id != "#path352" && pointer.id != "#path476"){
+                pointer.style.fill = "black"
+            }
+            // if (pointer = "#g302" )
+        }
+    </script>
+</body>
+
+</html>

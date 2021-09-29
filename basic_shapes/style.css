@@ -1,0 +1,62 @@
+/* .stroke {
+  animation: 1s infinite ease;
+  animation-name: stroke_kf;
+}
+
+@keyframes stroke_kf {
+  0% {
+    stroke: black;
+  }
+  100% {
+    stroke: red;
+  }
+} */
+
+/* .elements {
+  background-color: red;
+} */
+/* svg {
+  width: 80vh;
+  border: 1px solid #d9d9d9;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
+
+#box {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  animation: example 3s ease;
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
