@@ -17,6 +17,7 @@ function manipulateSVG() {
         element.addEventListener("mouseover", mouseOver)
         element.addEventListener("mouseout", mouseOut)
         element.addEventListener("click", pickPart)
+
     })
 }
 
