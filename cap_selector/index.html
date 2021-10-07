@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cap selector</title>
+</head>
+<body>
+    <section></section>
+    <svg viewBox="0 0 842 200">
+        <g>
+            <rect   id="red" class="color_btn" width="100" height="100" fill="red"/>  
+        </g>
+        <g>
+            <rect id="blue" class="color_btn" x="110" width="100" height="100" fill="blue"/>
+        </g>
+        <g> 
+            <rect id="green" class="color_btn" x="220" width="100" height="100" fill="green"/>           
+        </g>
+        <g>
+            <rect id="yellow" class="color_btn" x="330" width="100" height="100" fill="yellow"/>
+        </g>
+
+    </svg>
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", start);
+    let elementToPaint = ""
+    
+
+    async function start() {
+        let response = await fetch("cap-01.svg")
+        let svgData = await response.text();
+        document.querySelector("section").innerHTML = svgData;
+        manipulateSVG();
+    }
+
+
+    function manipulateSVG () {
+        document.querySelectorAll("#visir, #crown").forEach(element => {
+            element.addEventListener("click", pickPart)
+            
+        });
+        document.querySelector("#red").addEventListener("click", pickRed)
+        document.querySelector("#blue").addEventListener("click", pickBlue)
+        document.querySelector("#green").addEventListener("click", pickGreen)
+        document.querySelector("#yellow").addEventListener("click", pickYellow)
+    }
+
+    function pickPart(event) {
+          elementToPaint = event.currentTarget
+          elementToPaint.style.fill = 'grey'
+          
+    }
+    function pickRed() {
+        if(elementToPaint.id === "crown" ) {
+            document.querySelector("#crown").style.fill = "red"
+        } else if(elementToPaint.id === "visir") {
+            document.querySelector("#visir").style.fill = "red"
+        }
+    }
+    function pickBlue() {
+        if(elementToPaint.id === "crown" ) {
+            document.querySelector("#crown").style.fill = "blue"
+        } else if(elementToPaint.id === "visir") {
+            document.querySelector("#visir").style.fill = "blue"
+        }
+    }
+    function pickGreen() {
+        if(elementToPaint.id === "crown" ) {
+            document.querySelector("#crown").style.fill = "green"
+        } else if(elementToPaint.id === "visir") {
+            document.querySelector("#visir").style.fill = "green"
+        }
+    }
+    function pickYellow() {
+        if(elementToPaint.id === "crown" ) {
+            document.querySelector("#crown").style.fill = "yellow"
+        } else if(elementToPaint.id === "visir") {
+            document.querySelector("#visir").style.fill = "yellow"
+        }
+    }
+       //  document.querySelectorAll("#visir, #crown").forEach(element => {
+        //      element.style.fill = "grey"
+            
+        //  }); 
+            // if(pointer.id === "crown") {
+            //     document.querySelectorAll("#crown").forEach(element => {
+            //         element.style.fill = "grey"
+            //     })
+            //     // console.log(pointer.id, "element to paint")
+            // }
+
+            // if(pointer.id === "visir" ) {
+            //     document.querySelectorAll("#visir").forEach(element => {
+            //             element.style.fill ="grey"
+            //         })
+            //         // console.log(elementToPaint, "element to paint")
+
+            //     }
+
+            // document.querySelectorAll("#g_to_interact_with, #g_to_interact_with").forEach(element => {
+            //     element.style.fill = "green"
+                
+            // })
+        
+
+        // function mouseover (event) {
+        //     let pointer = event.target
+        //     console.log(pointer.id, "pointer id")
+        //     if(pointer.id === "green"){
+        //         pointer.style.fill = "green"
+        //     }
+    
+
+        
+    </script>
+</body>
+</html>

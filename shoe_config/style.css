@@ -1,0 +1,10 @@
+section,
+h1 {
+  display: flex;
+  place-content: center;
+}
+
+svg {
+  width: 400px;
+  height: 400px;
+}
