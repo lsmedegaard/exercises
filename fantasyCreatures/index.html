@@ -4,11 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>fantasy creatures</title>
 </head>
 <body>
-    <form>
-        
-    </form>
+<form">
+      <fieldset id="info">
+          <legend>Information about the creature</legend>
+            <label for="color">Color</label>
+            <input
+                   id="color"
+                   name="color"
+                   type="color"
+                   inputmode="text"
+                   required>
+          
+            <label for="alignment">Alignment</label>
+            <input
+                   id="alignment"
+                   name="alignment"
+                   type="text"
+                   inputmode="range"
+                   required>
+            
+            <label for="texture">Texture</label>
+            <input
+                   id="texture"
+                   name="texture"
+                   type="text"
+                   inputmode="text"
+                   required>
+          
+            <label for="horns">Horns</label>
+            <input
+                   id="horns"
+                   name="horns"
+                   type="checkbox"
+                   required>
+            
+            <label for="species">Species</label>
+            <input
+                   id="species"
+                   name="species"
+                   type="text"
+                   required>
+          
+            <label for="mythology">Mythology</label>
+            <input
+                   id="mythology"
+                   name="mythology"
+                   type="text"
+                   required>
+
+            <label for="age">Age</label>
+            <input
+                   id="age"
+                   name="age"
+                   type="number"
+                   required>
+      </fieldset>
+
+<fieldset>
+    <legend>abilities</legend>
+    <label for="abilities">abilities</label>
+    <input
+           id="abilities"
+           name="abilities"
+           type="text"
+           required>
+</fieldset>
+
+<button>Add creature</button>
+
+  
+</form>
 </body>
 </html>
